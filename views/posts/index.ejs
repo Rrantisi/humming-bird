@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<body>
+<%- include('../partials/header') %>
+
+        <% posts.forEach(p => { %>
+            <div>
+                <p>
+                    <%= p.title %>
+                </p>
+                <p>
+                    <%= p.location %>
+                </p>
+                <p>
+                    <%= p.content %>
+                </p>
+                <p>
+                    <a href="/posts/<%= p._id %>">View More</a>
+                </p>
+            </div>
+        <% }) %>
+
+
+<%- include('../partials/footer') %>
+</body>
+</html>

@@ -17,24 +17,24 @@ async function create(req, res) {
     }
 }
 
-async function show(req, res) {
+async function index(req, res) {
+
     try {
-        const foundPost = await Post.findById(req.params.id);
-        res.render('posts/show', {
-            title: 'Post Details',
-            post: foundPost,
-        })
+        const allPosts = await Post.find({});
+        
+        res.render('posts/index', { 
+            posts: allPosts, 
+            title: 'All Posts'
+        });
     } catch (error) {
-        console.error(error);
-        res.render('error', {
-            title: 'Something Went Wrong!'
-        })
+        console.log(error);
+        // res.render('error', {
+        //     title: 'Something Went Wrong'
+        // });
     }
 }
-
-
 module.exports = {
     new: newPost,
     create,
-    show
+    index,
 }
