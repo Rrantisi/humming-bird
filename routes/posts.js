@@ -9,6 +9,7 @@ router.get('/new', postsController.new)
 router.post('/', postsController.create);
 
 //GET / - Index Route
+router.get('/', postsController.index);
 
 //GET /posts/:id - Show Route
 
