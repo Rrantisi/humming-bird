@@ -11,5 +11,7 @@ router.post('/', postsController.create);
 //GET / - Index Route
 
 //GET /posts/:id - Show Route
+router.get('/:id', postsController.show);
+
 
 module.exports = router;
