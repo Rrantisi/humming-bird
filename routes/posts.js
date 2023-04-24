@@ -12,5 +12,7 @@ router.post('/', postsController.create);
 router.get('/', postsController.index);
 
 //GET /posts/:id - Show Route
+router.get('/:id', postsController.show);
+
 
 module.exports = router;
