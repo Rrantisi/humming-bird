@@ -17,7 +17,6 @@ async function create(req, res) {
     }
 }
 
-
 async function show(req, res) {
     try {
         const foundPost = await Post.findById(req.params.id);
