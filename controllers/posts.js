@@ -17,7 +17,24 @@ async function create(req, res) {
     }
 }
 
+async function index(req, res) {
+
+    try {
+        const allPosts = await Post.find({});
+        
+        res.render('posts/index', { 
+            posts: allPosts, 
+            title: 'All Posts'
+        });
+    } catch (error) {
+        console.log(error);
+        // res.render('error', {
+        //     title: 'Something Went Wrong'
+        // });
+    }
+}
 module.exports = {
     new: newPost,
     create,
+    index,
 }
