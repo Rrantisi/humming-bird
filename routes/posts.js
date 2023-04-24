@@ -8,4 +8,8 @@ router.get('/new', postsController.new)
 //POST /posts - Create Route
 router.post('/', postsController.create);
 
+//GET / - Index Route
+
+//GET /posts/:id - Show Route
+
 module.exports = router;

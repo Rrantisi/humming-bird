@@ -11,9 +11,9 @@ async function create(req, res) {
 
     } catch(error) {
         console.error(error);
-        res.render('error', {
-            title: 'Something Went Wrong!'
-        })
+        // res.render('error', {
+        //     title: 'Something Went Wrong!'
+        // })
     }
 }
 
