@@ -24,6 +24,9 @@ app.use('/', indexRoutes);
 app.use('/posts', postRoutes)
 
 // "fallback" or "catch all" route for serving 404 page
+app.use('*', (req, res) => {
+    res.render('404', {title: '404 - Page Not Found'});
+});
 
 // tell the application to listen for requests
 app.listen(4000, () => {
