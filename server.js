@@ -24,6 +24,6 @@ app.use('/', indexRoutes);
 // "fallback" or "catch all" route for serving 404 page
 
 // tell the application to listen for requests
-app.listen(3000, () => {
-    console.log('express is listening on port: 3000')
+app.listen(4000, () => {
+    console.log('express is listening on port: 4000')
 })
