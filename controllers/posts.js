@@ -28,13 +28,30 @@ async function index(req, res) {
         });
     } catch (error) {
         console.log(error);
-        // res.render('error', {
-        //     title: 'Something Went Wrong'
-        // });
+        res.render('error', {
+            title: 'Something Went Wrong'
+        });
     }
 }
+
+async function show(req, res) {
+    try {
+        const foundPost = await Post.findById(req.params.id);
+        res.render('posts/show', {
+            title: 'Post Details',
+            post: foundPost,
+        })
+    } catch (error) {
+        console.error(error);
+        res.render('error', {
+            title: 'Something Went Wrong!'
+        })
+    }
+}
+
 module.exports = {
     new: newPost,
     create,
     index,
+    show
 }

@@ -3,6 +3,7 @@ const express = require("express");
 const logger = require("morgan");
 const indexRoutes = require("./routes/index");
 const postRoutes = require("./routes/posts");
+const commentsRoutes = require('./routes/comments');
 
 // initialize express application
 const app = express();
@@ -22,6 +23,7 @@ app.use(express.urlencoded({ extended: false }));
 // mount routes
 
 app.use("/", indexRoutes);
+app.use('/', commentsRoutes);
 app.use("/posts", postRoutes);
 
 // "fallback" or "catch all" route for serving 404 page
