@@ -15,23 +15,29 @@ const app = express();
 //configure application settings
 app.set("view engine", "ejs");
 // expose environment variables
-require("dotenv").config();
+require('dotenv').config();
 // require an execute database config code
-require("./config/database");
+require('./config/database');
+require('./config/passport');
 
 // mount middleware
 app.use(logger("dev"));
-app.use(methodOverride(‘_method’));
+
+app.use(methodOverride('_method'));
+
 app.use(session({
     secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true
   }));
+
 app.use(passport.initialize());
 app.use(passport.session());
+
+// Add this middleware BELOW passport middleware
 app.use(function (req, res, next) {
-    res.locals.user = req.user;
-    next();
+  res.locals.user = req.user;
+  next();
 });
 
 app.use(express.static("public"));
