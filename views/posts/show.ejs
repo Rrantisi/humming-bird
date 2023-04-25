@@ -8,12 +8,23 @@
         <h6><%= post.location %></h6>
         <p><%= post.content %></p>
         <% post.comments.forEach(comment => { %>
-            <p><%= comment.content %></p>
+            <section>
+                <p class="comment-user"><img alt="avatar" src="<%= comment.userAvatar %>" referrerpolicy="no-referrer" ><%= comment.userName %></p>
+                <p><%= comment.createdAt.toLocaleDateString() %></p>
+                <p><%= comment.content %></p>   
+                <% if (user?._id.equals(comment.user)) { %>
+                    <form action="/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                    <button type="submit">X</button>
+                    </form>
+                <% } %> 
+            </section>
         <% }) %>
+        <% if (user) { %>
         <form action="/posts/<%= post._id %>/comments" method="POST">
             <textarea name="content" id="comment-content" cols="30" rows="10" placeholder="Add a comment..."></textarea>
             <input type="submit" value="Add Comment">
         </form>
+        <% } %>
     </section>
     <%- include('../partials/footer') %>
 </body>

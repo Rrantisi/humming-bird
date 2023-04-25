@@ -2,8 +2,13 @@
     <a href="/"><img src="/imgs/logo.png" alt="logo image"></a>
     <input type="text" placeholder="Search HummingBird...">
     <nav>
-        <a href="/posts"><i class="fa-solid fa-house"></i></a>
-        <a href="/posts/new"><i class="fa-solid fa-plus"></i></a>
-        <a href=""><i class="fa-solid fa-user"></i></a>
+        <a href="/posts" <%- title === 'All Posts' ? 'class="active"' : '' %>><i class="fa-solid fa-house"></i></a>
+        <% if (user) { %>
+            <a href="/posts/new" <%- title === 'Add a New Post' ? 'class="active"' : '' %>><i class="fa-solid fa-plus"></i></a>
+            <!-- <a href="/logout">LOG OUT</a> -->
+            <a href="/logout"><img alt="avatar" src="<%= user.avatar %>" referrerpolicy="no-referrer" ></a>
+        <% } else { %>
+            <a href="/auth/google" class="login"><i class="fa-solid fa-user"></i></a>
+        <% } %>
     </nav>
 </header>
