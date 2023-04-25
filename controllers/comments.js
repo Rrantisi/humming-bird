@@ -22,7 +22,6 @@ async function create(req, res) {
   
 async function deleteComment(req, res) {
     // Note the cool "dot" syntax to query on the property of a subdoc
-    // const post = await Post.findOne({ 'comments._id': req.params.id, 'comments.user': req.user._id });
     const post = await Post.findById(req.params.id)
     // Rogue user!
     if (!post) return res.redirect('/posts');

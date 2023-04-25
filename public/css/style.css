@@ -53,6 +53,13 @@ header img {
     border-radius: 50%;
 }
 
+#avatar {
+    height: 5vmin;
+    display: flex;
+    justify-content: center;
+    border: 1px solid white;
+}
+
 a {
     color:#19232158;
     font-size: 3vmin;
