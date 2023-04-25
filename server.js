@@ -3,6 +3,7 @@ const express = require("express");
 const logger = require("morgan");
 const session = require('express-session');
 const passport = require('passport');
+const methodOverride = require('method-override');
 const indexRoutes = require("./routes/index");
 const postRoutes = require("./routes/posts");
 const commentsRoutes = require('./routes/comments');
@@ -20,6 +21,7 @@ require("./config/database");
 
 // mount middleware
 app.use(logger("dev"));
+app.use(methodOverride(‘_method’));
 app.use(session({
     secret: process.env.SECRET,
     resave: false,
