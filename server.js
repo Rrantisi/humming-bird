@@ -2,6 +2,7 @@
 const express = require("express");
 const logger = require("morgan");
 const session = require('express-session');
+const passport = require('passport');
 const indexRoutes = require("./routes/index");
 const postRoutes = require("./routes/posts");
 const commentsRoutes = require('./routes/comments');
@@ -24,6 +25,8 @@ app.use(session({
     resave: false,
     saveUninitialized: true
   }));
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
@@ -33,6 +36,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/", indexRoutes);
 app.use('/', commentsRoutes);
 app.use("/posts", postRoutes);
+
 
 // "fallback" or "catch all" route for serving 404 page
 app.use("*", (req, res) => {
