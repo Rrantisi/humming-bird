@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %>
+    <section>
+        <form action="/posts/<%= post._id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
+            <textarea name=“content” id=“comment-content” cols=“30” rows=“10" placeholder=“Edit comment...“></textarea>
+            <input type=“submit” value=“Edit Comment”>
+        </form>    
+    </section>
+    <%- include('../partials/footer') %>
+</body>
+</html>

@@ -13,6 +13,7 @@
                 <p><%= comment.createdAt.toLocaleDateString() %></p>
                 <p><%= comment.content %></p>   
                 <% if (user?._id.equals(comment.user)) { %>
+                    <a href="/posts/<%= post.id %>/comments/<%= comment.id %>/edit" class="update">Update Comment</a>
                     <form action="/posts/<%= post._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
                     <button type="submit">X</button>
                     </form>
