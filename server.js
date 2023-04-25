@@ -1,9 +1,11 @@
 // require dependencies
 const express = require("express");
 const logger = require("morgan");
+const session = require('express-session');
 const indexRoutes = require("./routes/index");
 const postRoutes = require("./routes/posts");
 const commentsRoutes = require('./routes/comments');
+
 
 // initialize express application
 const app = express();
@@ -17,6 +19,12 @@ require("./config/database");
 
 // mount middleware
 app.use(logger("dev"));
+app.use(session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: true
+  }));
+
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 
