@@ -4,45 +4,63 @@
 }
 
 body {
-    background-color: white;
+    background-color: #bbe4de15;
     height: 100vh;
     text-align: center;
     display: flex;
     flex-direction: column;
-    color: gray;
-    font-family: 'Indie Flower', cursive;
+    color: #575656;
+    font-family: 'Handlee', cursive;
 }
 
-header {
+.nav-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #bbe4de;
-    padding: 0.6vmin 1.2vmin;
+    background-color: #ceeae6;
+    /* background-color: #bbe4deaa; */
+    padding: 0.6vmin 5vmin;
     border-bottom: 2px solid #c5ebe5;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
-img {
+header img {
     height: 6vmin;
     border-radius: 50%;
-    border: 2px solid #c5ebe5;
+}
+
+.nav-header input {
+    border: none;
+    border-radius: 40vmin;
+    padding: 1vmin 3vmin;
+    width: 60vmin;
+    color:#00796d;
+    background-color: #f6fbfa58;
+    outline: none;
+}
+
+.placeholder-img {
+    height: 40vmin;
+    margin: 10vmin;
 }
 
 .fa-solid {
-    font-size: 3vmin;
     border: 1px solid white;
     padding: 1vmin;
     border-radius: 50%;
-    transition: 500ms;
 }
 
 a {
-    color: #00796d;
+    color:#19232158;
+    font-size: 3vmin;
+    border-radius: 50%;
 }
 
 .fa-solid:hover {
-    background-color: white;
+    color: #00796d;
 }
 
 header > a {
@@ -58,6 +76,7 @@ header nav {
 
 a:not(:last-child) {
     padding-right: 1vmin;
+    text-decoration: none;
 }
 
 section {
@@ -73,40 +92,134 @@ section {
 }
 
 h1 {
-    font-size: 6vmin;
-    margin: 6vmin;
+    font-size: 8vmin;
+    margin: 4vmin;
     color: #00796d;
+    margin-top: 30vmin;
+    margin-bottom: 10vmin;
 }
 
-footer {
-    background-color: #c5ebe5;
-    padding: 0.8vmin;
-    text-align: left;
-    font-size: 1.8vmin;
-    border-top: 1px solid #bbe4de;
-    position: fixed;
-    width: 100%;
-    color: black;
-    bottom: 0;
+.intro-header {
+    padding: 4vmin;
+}
+
+.intro-header > h2 {
+    font-size: 3.5vmin;
+    margin-bottom: 3vmin;
+}
+
+section > div {
+    margin-top: 10vmin;
+    display: grid;
+    grid-template-rows: repeat(5, 26vmin);
+    gap: 2vmin;
+}
+
+div > p {
+    padding: 5vmin;
+    font-size: 3vmin;
+    text-align: justify;
+    border-radius: 2vmin;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #f0f0f0
+}
+
+div > p:hover {
+    border: 1px solid #00796d;
+    transition: 800ms;
+}
+
+section > h5 {
+    margin: 4vmin auto 2vmin;
+    color: #ab29be;
+    font-size: 3vmin;
+}
+
+section > p {
+    font-size: 2vmin;
+}
+
+#log-in {
+    background-color: #00796d;
+    color: white;
+    border-radius: 1vmin;
+    padding: 1vmin 2vmin;
+    text-decoration: none;
+    margin: 5vmin;
+}
+
+#log-in:hover {
+    border-radius: 3vmin;
+    transition: 400ms;
 }
 
 .posts-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px));
-    grid-gap: 20px;
+    grid-gap: 3vmin;
+    margin: 10vmin auto;
+}
+
+.posts-grid > article {
+    background-color: white;
+    padding: 3vmin 2vmin 3vmin 4vmin;
+    width: 80vmin;
+    border: 1px solid #f0f0f0
+}
+
+.posts-grid > article:hover {
+    border: 1px solid #d1cfcf;
+    transition: 400ms;
+}
+
+.posts-grid > p {
+    border: 1px solid #f0f0f0;
+    background-color: white;
+    padding: 2vmin;
+    text-align: left;
+    padding: 3vmin;
+    font-size: 2.4vmin;
+    color:#00796d;
+    font-weight: 600;
 }
 
 article {
-    background-color: f7f7f7;
-    padding: 20px;
-    border: 1px solid #ddd;
+    text-align: left;
 }
 
-h2 {
-    margin-top: 20px;
+article > h2 {
+    margin-bottom: 2vmin;
+}
+
+article p {
+    color:#ab29be;
+    font-size: 1.8vmin;
+}
+
+h2 > a {
+    margin-top: 3vmin;
+    font-size: 2vmin;
 }
 
 a {
     display: block;
     margin-top: 0px;
+    text-decoration: none;
 }
+
+footer {
+    background-color: #c5ebe588;
+    padding: 0.8vmin;
+    text-align: left;
+    font-size: 1.8vmin;
+    border-top: 1px solid #bbe4de;
+    color: black;
+}
+
+@media only screen and (max-width: 750px) {
+    section {
+        width: 80vmin;
+    }
+  }
