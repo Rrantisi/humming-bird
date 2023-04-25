@@ -1,9 +1,27 @@
 <header class="nav-header">
     <a href="/"><img src="/imgs/logo.png" alt="logo image"></a>
     <input type="text" placeholder="Search HummingBird...">
-    <nav>
+    <!-- <nav>
         <a href="/posts"><i class="fa-solid fa-house"></i></a>
         <a href="/posts/new"><i class="fa-solid fa-plus"></i></a>
         <a href=""><i class="fa-solid fa-user"></i></a>
-    </nav>
+    </nav> -->
+    <nav>
+        <!-- we usually put the hyperlink inside a list -->
+        <a href=“/”>Home Page</a>
+        <!-- identify the RESTful route: add the link to all movies in the header-->
+        <!-- <a href=“/movies”>All Movies</a>
+        <a href=“/movies/new”>New Movie</a>
+        <a href=“/performers/new”>Add Performers</a> -->
+            <a href=“/posts” <%- title === ‘All Posts ? ‘class=“active”’ : ‘’ %>>ALL POSTS</a>
+            <% if (user) { %>
+              <a href=“/comments/new” <%- title === ‘Add Comment’ ? ‘class=“active”’ : ‘’ %>>
+                  ADD COMMENT</a>
+              <a href=“/movies/new” <%- title === ‘Add Post’ ? ‘class=“active”’ : ‘’ %>>ADD POST</a>
+              <a href=“/logout”>LOG OUT</a>
+              <img alt=“avatar” src=“<%= user.avatar %>” referrerpolicy=“no-referrer” >
+              <% } else { %>
+              <a href=“/auth/google” class=“login”>LOG IN&nbsp;<i class=“fa-solid fa-user”></i></a>
+            <% } %>
+          </nav>     
 </header>
