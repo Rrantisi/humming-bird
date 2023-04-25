@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: gray;
+    font-family: 'Indie Flower', cursive;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #bbe4de;
+    padding: 0.6vmin 1.2vmin;
+    border-bottom: 2px solid #c5ebe5;
+}
+
+img {
+    height: 6vmin;
+    border-radius: 50%;
+    border: 2px solid #c5ebe5;
+}
+
+.fa-solid {
+    font-size: 3vmin;
+    border: 1px solid white;
+    padding: 1vmin;
+    border-radius: 50%;
+    transition: 500ms;
+}
+
+a {
+    color: #00796d;
+}
+
+.fa-solid:hover {
+    background-color: white;
+}
+
+header > a {
+    display: flex;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+a:not(:last-child) {
+    padding-right: 1vmin;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    align-items: center;
+    margin-left: auto;
+    flex-grow: 1;
+    margin: auto;
+}
+
+h1 {
+    font-size: 6vmin;
+    margin: 6vmin;
+    color: #00796d;
+}
+
+footer {
+    background-color: #c5ebe5;
+    padding: 0.8vmin;
+    text-align: left;
+    font-size: 1.8vmin;
+    border-top: 1px solid #bbe4de;
+    position: fixed;
+    width: 100%;
+    color: black;
+    bottom: 0;
+}
