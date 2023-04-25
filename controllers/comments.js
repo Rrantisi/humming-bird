@@ -10,7 +10,7 @@ async function create(req, res) {
 
         foundPost.comments.push(req.body);
         await foundPost.save();
-        res.redirect(`/posts/${req.params.id}`);
+        res.redirect(`/posts/${foundPost._id}`);
 
     } catch(error) {
         console.error(error);
@@ -22,15 +22,16 @@ async function create(req, res) {
   
 async function deleteComment(req, res) {
     // Note the cool "dot" syntax to query on the property of a subdoc
-    const post = await Post.findOne({ 'comments._id': req.params.id, 'comments.user': req.user._id });
+    // const post = await Post.findOne({ 'comments._id': req.params.id, 'comments.user': req.user._id });
+    const post = await Post.findById(req.params.id)
     // Rogue user!
     if (!post) return res.redirect('/posts');
     // Remove the review using the remove method available on Mongoose arrays
-    post.comments.remove(req.params.id);
+    post.comments.remove(req.params.commentId);
     // Save the updated movie doc
     await post.save();
     // Redirect back to the movie's show view
-    res.redirect(`/posts/${req.params.id}`);
+    res.redirect(`/posts/${post._id}`);
   }
 
 module.exports = {

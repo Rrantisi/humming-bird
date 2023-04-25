@@ -13,7 +13,7 @@
                 <p><%= comment.createdAt.toLocaleDateString() %></p>
                 <p><%= comment.content %></p>   
                 <% if (user?._id.equals(comment.user)) { %>
-                    <form action="/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                    <form action="/posts/<%= post._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
                     <button type="submit">X</button>
                     </form>
                 <% } %> 
