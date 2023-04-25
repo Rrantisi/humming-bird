@@ -3,24 +3,20 @@
 <%- include('../partials/head') %>
 <body>
 <%- include('../partials/header') %>
-    <section>
+<main>
+    <section class="posts-grid">
         <% posts.forEach(p => { %>
-            <div>
-                <p>
-                    <%= p.title %>
-                </p>
-                <p>
-                    <%= p.location %>
-                </p>
-                <p>
-                    <%= p.content %>
-                </p>
-                <p>
+            <article>
+                <h2><%= p.title %></h2>
+                <h2><%= p.location %></h2>
+                <h2><%= p.content %></h2>
                     <a href="/posts/<%= p._id %>">View More</a>
-                </p>
-            </div>
+                </h2>
+            </article>
         <% }) %>
-    </section>
+    </section>   
+</main>
+
 <%- include('../partials/footer') %>
 </body>
 </html>

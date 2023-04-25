@@ -89,3 +89,24 @@ footer {
     color: black;
     bottom: 0;
 }
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px));
+    grid-gap: 20px;
+}
+
+article {
+    background-color: f7f7f7;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+a {
+    display: block;
+    margin-top: 0px;
+}
