@@ -27,7 +27,11 @@
             </div>
             <h5>Join HummingBird today and become a part of our thriving community.</h5>
             <p>We look forward to getting to know you and supporting you on your journey!</p>
-            <a href="/auth/google" id="log-in">Log In</a>
+            <% if (user) { %>
+                <a href="/logout" class="log-in-out">Log Out</a>
+            <% } else { %>
+                <a href="/auth/google" class="log-in-out">Log In</a>
+            <% } %>
         </section>
         <%- include('./partials/footer') %>
     </body>

@@ -5,10 +5,10 @@
     <%- include('../partials/header') %>
     <section>
         <form id="new-post" action="/posts" method="POST">
-            <input type="text" name="title" placeholder="Title:"></br>
-            <input type="text" name="location" placeholder="Location:"></br>
-            <textarea name="content" cols="30" rows="10" required></textarea></br> 
-            <input type="submit" value="Add Post">
+            <input class="input" type="text" name="title" placeholder="Title:" required></br>
+            <input class="input" type="text" name="location" placeholder="Location:" required></br>
+            <textarea class="input" name="content" cols="30" rows="10" required placeholder="Add Text..."></textarea></br> 
+            <input id="submit" type="submit" value="Post">
         </form>    
     </section>
     <%- include('../partials/footer') %>
