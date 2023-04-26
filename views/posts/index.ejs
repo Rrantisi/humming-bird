@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<body>
+<%- include('../partials/header') %>
+<main>
+    <section class="posts-grid">
+        <p>Recent Posts:</p>
+        <% posts.forEach(p => { %>
+            <article>
+                <p class="location"><i class="fa-solid fa-location-dot"></i><%= p.location %></p>
+                <h2 class="post-title"><%= p.title %></h2>
+                <h3><%= p.content %></h2>
+                <h2><a href="/posts/<%= p._id %>">View More</a></h2>
+            </article>
+        <% }) %>
+    </section>   
+</main>
+
+<%- include('../partials/footer') %>
+</body>
+</html>

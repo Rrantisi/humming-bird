@@ -1,5 +1,15 @@
-<header>
-    <h1>HummingBird</h1>
+<header class="nav-header">
+    <a href="/"><img src="/imgs/logo.png" alt="logo image"></a>
+    <input type="text" placeholder="Search HummingBird...">
     <nav>
+        <a href="/posts" <%- title === 'All Posts' ? 'class="active"' : '' %>><i class="fa-solid fa-house"></i></a>
+        <% if (user) { %>
+            <a href="/posts/new" <%- title === 'Add a New Post' ? 'class="active"' : '' %>><i class="fa-solid fa-plus"></i></a>
+            <!-- <a href="/logout">LOG OUT</a> -->
+            <a href="/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+            <img id="avatar" alt="avatar" src="<%= user.avatar %>" referrerpolicy="no-referrer" >
+        <% } else { %>
+            <a href="/auth/google" class="login"><i class="fa-solid fa-right-to-bracket"></i></a>
+        <% } %>
     </nav>
 </header>
