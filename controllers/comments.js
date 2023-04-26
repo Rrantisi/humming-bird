@@ -34,20 +34,29 @@ async function deleteComment(req, res) {
 }
 
 async function edit(req, res) {
-    const post = await Post.findById(req.params.id)
-    // const commentId = await Post.find({comment: 'comment._id'})
-    const commentId = req.params.commentId;
-    if (!post) return res.redirect('/posts');
-    res.render('comments/edit', { title: 'Edit Comment', post, comment: commentId});
+  const post = await Post.findById(req.params.id)
+  const comment = post.comments.id(req.params.commentId)
+  if (!post) return res.redirect('/posts');
+  res.render('comments/edit', { title: 'Edit Comment', post, comment});
 }
 
 async function update(req, res) {
-    Post.findOneAndUpdate(
-        { _id: req.params.id, 'comments._id': req.params.commentId }, 
-        req.body,
-        { new: true },
-        res.redirect(`/posts/${post._id}`)
-    )
+  // Note the cool "dot" syntax to query on the property of a subdoc
+  const post = await Post.findOne({'comments._id': req.params.commentId});
+  // Find the comment subdoc using the id method on Mongoose arrays
+  const comment = post.comments.id(req.params.commentId);
+  // Ensure that the comment was created by the logged in user
+  if (!comment.user.equals(req.user._id)) return res.redirect(`/posts/${post._id}`);
+  comment.content = req.body.content;
+  try {
+    await post.save();
+  } catch (error) {
+    console.error(error);
+    res.render("error", {
+      title: "Something Went Wrong!",
+    });
+  }
+  res.redirect(`/posts/${post._id}`);
 }
 
 module.exports = {
