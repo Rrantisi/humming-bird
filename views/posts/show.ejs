@@ -6,8 +6,9 @@
     <section class="show-post">
         <div id="post-details">
             <p class="location"><i class="fa-solid fa-location-dot"></i><%= post.location %></p>
+            <p class="date"><%= post.createdAt.toLocaleDateString() %></p>
             <h2 class="post-title"><%= post.title %></h3>
-            <h3><%= post.content %></h3>  
+            <h3><%= post.content %></h3> 
         </div>
         <% if (user) { %>
             <form id="add-comment" action="/posts/<%= post._id %>/comments" method="POST">
@@ -20,7 +21,7 @@
                 <div id="comment-user">
                     <img id="avatar" alt="avatar" src="<%= comment.userAvatar %>" referrerpolicy="no-referrer" >
                     <p><%= comment.userName %></p>
-                    <p><%= comment.createdAt.toLocaleDateString() %></p>    
+                    <p class="date"><%= comment.createdAt.toLocaleDateString() %></p>   
                 </div>
                 <div id="comment-content">
                     <div>

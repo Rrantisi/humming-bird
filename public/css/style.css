@@ -215,6 +215,11 @@ section > #main-div {
     border: 1px solid #f0f0f0;
 }
 
+.date {
+    font-size: 1.6vmin;
+    margin: 0.6vmin;
+}
+
 textarea {
     resize: none;
 }
