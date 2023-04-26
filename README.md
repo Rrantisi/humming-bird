@@ -4,10 +4,11 @@
 <br />
 <div align="center">
   <a href="https://github.com/Rrantisi/humming-bird">
-    <img src="css/imgs/logo.png" alt="hummingbird" width="80" height="80">
+    <!-- <img src="css/imgs/logo.png" alt="hummingbird" width="80" height="80"> -->
+    ![Logo](imgs/logo.png)
   </a>
 
-  <h3 align="center">HummingBird</h3>
+  <h1 align="center">HummingBird</h1>
 
   <p align="center">
     A vibrant online community platform where you can connect with people from your community and build strong relationships.
@@ -15,9 +16,6 @@
     [insert heroku.app link here]
   </p>
 </div>
-
-# HummingBird
-<img src="css/imgs/logo.png">
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -61,16 +59,24 @@ Our platform is designed to be a one-stop-shop for all your community needs. Wh
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Experiencing HummingBird
-[insert project screenshots here ]
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
+
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
+
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 <p align="right">(<a href="#top">back to top</a>)</p>
- ## Getting Started
+
+## Getting Started
 [insert link here]
+
 Getting started with HummingBird it's very simple:
+
 * Login using your Google Account by clicking login button
 * Create a new post by clicking the "+" button
 * Read recent posts of your commuinty
 * Update existing comments
 * Delete existing comments  
+
 You can engage in lively discussions, share your insights, and make new friends with ease
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
@@ -90,9 +96,9 @@ You can engage in lively discussions, share your insights, and make new friends 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Contact 
-Reham Rantisi - rantisireham19@gmail.com [![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/rehamrantisi/)](https://www.linkedin.com/in/rehamrantisi/)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/rehamrantisi/)](https://www.linkedin.com/in/rehamrantisi/) Reham Rantisi - rantisireham19@gmail.com
 
-Mayra Martins - mayramartins.in@gmail.com [![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/mayra-martins-8a4b89195/)](https://www.linkedin.com/in/mayra-martins-8a4b89195/)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/mayra-martins-8a4b89195/)](https://www.linkedin.com/in/mayra-martins-8a4b89195/) Mayra Martins - mayramartins.in@gmail.com 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
