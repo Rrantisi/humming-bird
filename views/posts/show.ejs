@@ -3,28 +3,40 @@
 <%- include('../partials/head') %>
 <body>
     <%- include('../partials/header') %>
-    <section>
-        <h1><%= post.title %></h1>
-        <h6><%= post.location %></h6>
-        <p><%= post.content %></p>
+    <section class="show-post">
+        <div id="post-details">
+            <p class="location"><i class="fa-solid fa-location-dot"></i><%= post.location %></p>
+            <h2 class="post-title"><%= post.title %></h3>
+            <h3><%= post.content %></h3>  
+        </div>
+        <% if (user) { %>
+            <form id="add-comment" action="/posts/<%= post._id %>/comments" method="POST">
+                <textarea name="content" id="comment-content" cols="30" rows="10" placeholder="Add a comment..."></textarea>
+                <input type="submit" value="Add Comment">
+            </form>
+        <% } %>    
         <% post.comments.forEach(comment => { %>
             <section>
-                <p class="comment-user"><img alt="avatar" src="<%= comment.userAvatar %>" referrerpolicy="no-referrer" ><%= comment.userName %></p>
-                <p><%= comment.createdAt.toLocaleDateString() %></p>
-                <p><%= comment.content %></p>   
-                <% if (user?._id.equals(comment.user)) { %>
-                    <form action="/posts/<%= post._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
-                    <button type="submit">X</button>
-                    </form>
-                <% } %> 
+                <div id="comment-user">
+                    <img id="avatar" alt="avatar" src="<%= comment.userAvatar %>" referrerpolicy="no-referrer" >
+                    <p><%= comment.userName %></p>
+                    <p><%= comment.createdAt.toLocaleDateString() %></p>    
+                </div>
+                <div id="comment-content">
+                    <div>
+                        <p><%= comment.content %></p>   
+                    </div>
+                    <div id="update-delete">
+                        <% if (user?._id.equals(comment.user)) { %>
+                            <a href="/posts/<%= post.id %>/comments/<%= comment._id %>/edit" class="update">Update Comment</a>
+                            <form action="/posts/<%= post._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                                <button type="submit">X</button>
+                            </form>
+                        <% } %> 
+                    </div>
+                </div>
             </section>
         <% }) %>
-        <% if (user) { %>
-        <form action="/posts/<%= post._id %>/comments" method="POST">
-            <textarea name="content" id="comment-content" cols="30" rows="10" placeholder="Add a comment..."></textarea>
-            <input type="submit" value="Add Comment">
-        </form>
-        <% } %>
     </section>
     <%- include('../partials/footer') %>
 </body>

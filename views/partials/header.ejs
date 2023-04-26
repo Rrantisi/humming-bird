@@ -6,7 +6,8 @@
         <% if (user) { %>
             <a href="/posts/new" <%- title === 'Add a New Post' ? 'class="active"' : '' %>><i class="fa-solid fa-plus"></i></a>
             <!-- <a href="/logout">LOG OUT</a> -->
-            <a href="/logout"><img id="avatar" alt="avatar" src="<%= user.avatar %>" referrerpolicy="no-referrer" ></a>
+            <img id="avatar" alt="avatar" src="<%= user.avatar %>" referrerpolicy="no-referrer" >
+            <a href="/logout">Log Out</a>
         <% } else { %>
             <a href="/auth/google" class="login"><i class="fa-solid fa-user"></i></a>
         <% } %>

@@ -115,14 +115,14 @@ h1 {
     margin-bottom: 3vmin;
 }
 
-section > div {
+section > #main-div {
     margin-top: 10vmin;
     display: grid;
     grid-template-rows: repeat(5, 26vmin);
     gap: 2vmin;
 }
 
-div > p {
+#main-div > p {
     padding: 5vmin;
     font-size: 3vmin;
     text-align: justify;
@@ -133,9 +133,80 @@ div > p {
     border: 1px solid #f0f0f0
 }
 
-div > p:hover {
+#main-div > p:hover {
     border: 1px solid #00796d;
     transition: 800ms;
+}
+
+.show-post > section {
+    background-color: white;
+    width: 60vmin;
+    text-align: left;
+    margin-top: 2vmin;
+    margin-bottom: 2vmin;
+    flex-grow: 0;
+}
+
+#comment-user {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: 100%;
+    padding: 1vmin;
+    gap: 1vmin;
+}
+
+#comment-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60vmin;
+    padding: 1vmin;
+    border: none;
+    outline: none;
+}
+
+.update {
+    font-size: 1.8vmin;
+}
+
+#update-delete {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+#update-delete button{
+    border: none;
+    color: #00796d;
+    background-color: white;
+}
+
+#post-details {
+    margin-top: 15vmin;
+    background-color: white;
+    width: 60vmin;
+    padding: 2vmin;
+    text-align: left;
+    border: 1px solid #f0f0f0;
+}
+
+textarea {
+    resize: none;
+}
+
+#add-comment {
+    width: 60vmin;
+    margin-top: 2vmin;
+}
+
+#add-comment input {
+    background-color: #f0f0f0;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 2vmin;
+    color:#00796d;
 }
 
 section > h5 {
@@ -196,11 +267,11 @@ article {
     text-align: left;
 }
 
-article > h2 {
+.post-title {
     margin-bottom: 2vmin;
 }
 
-article p {
+.location {
     color:#ab29be;
     font-size: 1.8vmin;
 }
