@@ -12,5 +12,4 @@ router.get('/posts/:id/comments/:commentId/edit', ensureLoggedIn, commentsContro
 
 router.put('/posts/:id/comments/:commentId', ensureLoggedIn, commentsController.update);
 
-
 module.exports = router;
