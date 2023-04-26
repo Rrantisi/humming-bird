@@ -19,7 +19,6 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #ceeae6;
-    /* background-color: #bbe4deaa; */
     padding: 0.6vmin 5vmin;
     border-bottom: 2px solid #c5ebe5;
     position: fixed;
@@ -47,12 +46,6 @@ header img {
     margin: 10vmin;
 }
 
-.fa-solid {
-    border: 1px solid white;
-    padding: 1vmin;
-    border-radius: 50%;
-}
-
 #avatar {
     height: 5vmin;
     display: flex;
@@ -63,6 +56,12 @@ header img {
 a {
     color:#19232158;
     font-size: 3vmin;
+    border-radius: 50%;
+}
+
+.fa-solid {
+    border: 1px solid white;
+    padding: 1vmin;
     border-radius: 50%;
 }
 
@@ -138,12 +137,12 @@ section > #main-div {
     transition: 800ms;
 }
 
-.show-post > section {
+.comment-section {
     background-color: white;
     width: 60vmin;
     text-align: left;
-    margin-top: 2vmin;
-    margin-bottom: 2vmin;
+    margin-top: 0.5vmin;
+    margin-bottom: 0;
     flex-grow: 0;
 }
 
@@ -166,10 +165,6 @@ section > #main-div {
     outline: none;
 }
 
-.update {
-    font-size: 1.8vmin;
-}
-
 #update-delete {
     display: flex;
     flex-direction: row;
@@ -179,7 +174,23 @@ section > #main-div {
 #update-delete button{
     border: none;
     color: #00796d;
+    cursor: pointer;
+    font-size: 2.2vmin;
+    font-weight: 600;
     background-color: white;
+    padding: 0;
+}
+
+.fa-trash:hover, .fa-pen-to-square:hover{
+    color: #19232158; 
+    transition: 200ms; 
+}
+
+.fa-pen-to-square {
+    font-size: 2.2vmin;
+    color: #00796d;
+    padding: 0;
+    border: none;
 }
 
 #post-details {
@@ -197,21 +208,25 @@ textarea {
 
 #add-comment {
     width: 60vmin;
-    margin-top: 2vmin;
+    margin-top: 1vmin;
 }
 
-#add-comment input {
+#add-comment input, #submit {
     background-color: #f0f0f0;
     width: 100%;
     outline: none;
     border: none;
     padding: 2vmin;
     color:#00796d;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1vmin;
+    cursor: pointer;
 }
 
 #new-post {
     background-color: white;
-    padding: 5vmin;
+    padding: 2.5vmin;
     border-radius: 1vmin;
     width: 60vmin;
     border: 2px solid #f0f0f0;
@@ -221,21 +236,12 @@ textarea {
     border: 1px solid #d1cfcf;
     width: 100%;
     padding: 2vmin;
-    margin: 1vmin;
+    margin: 0.5vmin auto;
     outline-color: #aeacac ;
 }
 
 #submit {
-    width: 100%;
-    border: none;
-    color:#00796d;
-    font-weight: 600;
-    background-color: #f0f0f0;
-    margin-left: 1vmin;
-    padding: 1vmin;
-    letter-spacing: 0.3vmin;
-    text-transform: uppercase;
-    cursor: pointer;
+    margin: 0 auto;
 }
 
 section > h5 {

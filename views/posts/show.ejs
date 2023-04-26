@@ -16,7 +16,7 @@
             </form>
         <% } %>    
         <% post.comments.forEach(comment => { %>
-            <section>
+            <section class="comment-section">
                 <div id="comment-user">
                     <img id="avatar" alt="avatar" src="<%= comment.userAvatar %>" referrerpolicy="no-referrer" >
                     <p><%= comment.userName %></p>
@@ -28,9 +28,9 @@
                     </div>
                     <div id="update-delete">
                         <% if (user?._id.equals(comment.user)) { %>
-                            <a href="/posts/<%= post.id %>/comments/<%= comment._id %>/edit" class="update">Update Comment</a>
+                            <a href="/posts/<%= post.id %>/comments/<%= comment._id %>/edit"><i class="fa-solid fa-pen-to-square"></i></a>
                             <form action="/posts/<%= post._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
-                                <button type="submit">X</button>
+                                <button type="submit"><i class="fa-solid fa-trash"></i></button>
                             </form>
                         <% } %> 
                     </div>
