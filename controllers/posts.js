@@ -53,5 +53,5 @@ module.exports = {
     new: newPost,
     create,
     index,
-    show
+    show,
 }
