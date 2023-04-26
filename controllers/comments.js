@@ -35,22 +35,24 @@ async function deleteComment(req, res) {
 
 async function edit(req, res) {
     const post = await Post.findById(req.params.id)
+    // const commentId = await Post.find({comment: 'comment._id'})
     const commentId = req.params.commentId;
     if (!post) return res.redirect('/posts');
     res.render('comments/edit', { title: 'Edit Comment', post, comment: commentId});
 }
 
 async function update(req, res) {
-    const postId = req.params.id;
-    const commentId = req.params.commentId;
-    const post = await Post.findById(postId);
-    post.comments.id(commentId).content = req.body;
-    await post.save();
-    res.redirect(`/posts/${post._id}`);
+    Post.findOneAndUpdate(
+        { _id: req.params.id, 'comments._id': req.params.commentId }, 
+        req.body,
+        { new: true },
+        res.redirect(`/posts/${post._id}`)
+    )
 }
 
 module.exports = {
   create,
   delete: deleteComment,
   edit,
+  update
 };
