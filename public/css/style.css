@@ -209,6 +209,35 @@ textarea {
     color:#00796d;
 }
 
+#new-post {
+    background-color: white;
+    padding: 5vmin;
+    border-radius: 1vmin;
+    width: 60vmin;
+    border: 2px solid #f0f0f0;
+}
+
+.input{
+    border: 1px solid #d1cfcf;
+    width: 100%;
+    padding: 2vmin;
+    margin: 1vmin;
+    outline-color: #aeacac ;
+}
+
+#submit {
+    width: 100%;
+    border: none;
+    color:#00796d;
+    font-weight: 600;
+    background-color: #f0f0f0;
+    margin-left: 1vmin;
+    padding: 1vmin;
+    letter-spacing: 0.3vmin;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
 section > h5 {
     margin: 4vmin auto 2vmin;
     color: #ab29be;
@@ -296,8 +325,11 @@ footer {
     color: black;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 1200px) {
     section {
         width: 80vmin;
+    }
+    .nav-header > input {
+        width: 50vmin;
     }
   }
