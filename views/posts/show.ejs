@@ -8,22 +8,22 @@
             <p class="location"><i class="fa-solid fa-location-dot"></i><%= post.location %></p>
             <p class="date"><%= post.createdAt.toLocaleDateString() %></p>
             <h2 class="post-title"><%= post.title %></h3>
-            <h3><%= post.content %></h3> 
+            <h3 class="post-content"><%= post.content %></h3> 
         </div>
         <% if (user) { %>
             <form id="add-comment" action="/posts/<%= post._id %>/comments" method="POST">
-                <textarea name="content" id="comment-content" cols="30" rows="10" placeholder="Add a comment..."></textarea>
-                <input type="submit" value="Add Comment">
+                <textarea name="content" class="comment-content" cols="30" rows="6" placeholder="Add a comment..."></textarea>
+                <input class="submit" type="submit" value="Add Comment">
             </form>
         <% } %>    
         <% post.comments.forEach(comment => { %>
             <section class="comment-section">
                 <div id="comment-user">
                     <img id="avatar" alt="avatar" src="<%= comment.userAvatar %>" referrerpolicy="no-referrer" >
-                    <p><%= comment.userName %></p>
+                    <p class="user-name"><%= comment.userName %></p>
                     <p class="date"><%= comment.createdAt.toLocaleDateString() %></p>   
                 </div>
-                <div id="comment-content">
+                <div class="comment-content">
                     <div>
                         <p><%= comment.content %></p>   
                     </div>
@@ -31,7 +31,7 @@
                         <% if (user?._id.equals(comment.user)) { %>
                             <a href="/posts/<%= post.id %>/comments/<%= comment._id %>/edit"><i class="fa-solid fa-pen-to-square"></i></a>
                             <form action="/posts/<%= post._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
-                                <button type="submit"><i class="fa-solid fa-trash"></i></button>
+                                <button class="submit" type="submit"><i class="fa-solid fa-trash"></i></button>
                             </form>
                         <% } %> 
                     </div>

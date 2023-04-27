@@ -10,7 +10,7 @@
                 <p class="location"><i class="fa-solid fa-location-dot"></i><%= p.location %></p>
                 <p class ="date"><%= p.createdAt.toLocaleDateString() %></p>
                 <h2 class="post-title"><%= p.title %></h2>
-                <h3><%= p.content %></h2>
+                <h3 class="post-content"><%= p.content %></h2>
                 <h2><a href="/posts/<%= p._id %>">View More</a></h2>
             </article>
         <% }) %>
