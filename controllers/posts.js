@@ -18,7 +18,6 @@ async function create(req, res) {
 }
 
 async function index(req, res) {
-
     try {
         const allPosts = await Post.find({}).sort({ createdAt: -1 });
         

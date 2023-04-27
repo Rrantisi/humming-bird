@@ -26,6 +26,10 @@ body {
     width: 100%;
 }
 
+a {
+    color:#19232158;
+}
+
 .nav-header > a {
     display: flex;
     align-items: center;
@@ -42,8 +46,8 @@ header img {
 .nav-header input {
     border: none;
     border-radius: 40vmin;
-    padding: 1vmin 3vmin;
-    width: 60vmin;
+    padding: 1vmin 2.8vmin;
+    width: 70vmin;
     color:#00796d;
     background-color: #f6fbfa58;
     outline: none;
@@ -56,12 +60,11 @@ header img {
 
 #avatar {
     height: 5vmin;
-    display: flex;
-    justify-content: center;
+    align-items: center;
     border: 1px solid white;
 }
 
-a {
+nav > a {
     color:#19232158;
     font-size: 3vmin;
     border-radius: 50%;
@@ -76,10 +79,6 @@ a {
 
 .fa-solid:hover {
     color: #00796d;
-}
-
-header > a {
-    display: flex;
 }
 
 header nav {
