@@ -54,6 +54,6 @@ app.use("*", (req, res) => {
 });
 
 // tell the application to listen for requests
-app.listen(4000, () => {
+app.listen(process.env.PORT || 4000, () => {
   console.log("express is listening on port: 4000");
 });
