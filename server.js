@@ -43,7 +43,6 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 
 // mount routes
-
 app.use("/", indexRoutes);
 app.use("/", commentsRoutes);
 app.use("/posts", postRoutes);
