@@ -5,12 +5,18 @@
 
 body {
     background-color: #bbe4de15;
-    height: 100vh;
+    height: 100%;
+    overflow: auto;
     text-align: center;
     display: flex;
     flex-direction: column;
     color: #575656;
     font-family: 'Handlee', cursive;
+}
+
+html {
+    overflow: hidden;
+    height: 100%;
 }
 
 .nav-header {
@@ -101,7 +107,6 @@ section {
     width: 55%;
     align-items: center;
     margin-left: auto;
-    flex-grow: 1;
     margin: auto;
 }
 
@@ -155,7 +160,6 @@ section > #main-div {
     text-align: left;
     margin-top: 0.5vmin;
     margin-bottom: 0;
-    flex-grow: 0;
 }
 
 #comment-user {
