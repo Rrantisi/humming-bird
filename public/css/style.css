@@ -62,12 +62,12 @@ a > span {
     border: none;
     border-radius: 40vmin;
     padding: 1.8vmin 2.8vmin;
-    width: 70vmin;
+    width: 55vmin;
     color:#00796d;
     background-color: #f6fbfa58;
     outline: none;
     position: absolute;
-    left: 50vmin;
+    left: 45vmin;
     font-size: 2vmin;
 }
 
@@ -433,9 +433,9 @@ footer {
         font-size: 2.4vmin;
     }
     .nav-header > input {
-        width: 50vmin;
+        width: 42vmin;
         position: absolute;
-        left: 22vmin; 
+        left: 28vmin; 
         padding: 1.2vmin 2.6vmin;
     }
     .nav-header {
@@ -453,10 +453,19 @@ footer {
 }
 
 @media only screen and (max-width: 650px) {
-    .nav-header > input {
-        width: 40vmin;
-    }
     a > span {
         display: none;
     }
+    .nav-header > input {
+        left: 25vmin;
+    }
 }
+
+@media screen and (min-width: 1500px) {
+    .nav-header > input {
+        width: 70vmin;
+        position: absolute;
+        left: 65vmin; 
+        padding: 1.2vmin 2.6vmin;
+    }
+  }
