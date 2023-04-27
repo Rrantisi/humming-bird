@@ -20,7 +20,7 @@ async function create(req, res) {
 async function index(req, res) {
 
     try {
-        const allPosts = await Post.find({});
+        const allPosts = await Post.find({}).sort({ createdAt: -1 });
         
         res.render('posts/index', { 
             posts: allPosts, 
