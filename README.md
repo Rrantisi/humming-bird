@@ -90,10 +90,9 @@ Getting started with HummingBird it's very simple:
 1. Add profile button and display profile infos
 2. Like/Save post
 4. Search for posts/people on hummingBird
-5. See user profile details
-6. Edit/Delete a post
-7. Notifications feature
-8. Share post
+5. Edit/Delete a post
+6. Notifications feature
+7. Share post
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
