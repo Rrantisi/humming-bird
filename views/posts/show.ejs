@@ -8,7 +8,7 @@
             <p class="location"><i class="fa-solid fa-location-dot"></i><%= post.location %></p>
             <p class="date"><%= post.createdAt.toLocaleDateString() %></p>
             <h2 class="post-title"><%= post.title %></h3>
-            <h3 class="post-content"><%= post.content %></h3> 
+            <h3 class="post-content"><%= post.content %></h3>
         </div>
         <% if (user) { %>
             <form id="add-comment" action="/posts/<%= post._id %>/comments" method="POST">
