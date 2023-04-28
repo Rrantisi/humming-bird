@@ -15,21 +15,15 @@ async function create(req, res) {
     console.error(error);
     res.render("error", {
       title: "Something Went Wrong!",
-    });
+    })
   }
 }
 
 async function deleteComment(req, res) {
-  // Note the cool "dot" syntax to query on the property of a subdoc
-  // const post = await Post.findOne({ 'comments._id': req.params.id, 'comments.user': req.user._id });
   const post = await Post.findById(req.params.id);
-  // Rogue user!
   if (!post) return res.redirect("/posts");
-  // Remove the review using the remove method available on Mongoose arrays
   post.comments.remove(req.params.commentId);
-  // Save the updated movie doc
   await post.save();
-  // Redirect back to the movie's show view
   res.redirect(`/posts/${post._id}`);
 }
 
@@ -41,11 +35,8 @@ async function edit(req, res) {
 }
 
 async function update(req, res) {
-  // Note the cool "dot" syntax to query on the property of a subdoc
   const post = await Post.findOne({'comments._id': req.params.commentId});
-  // Find the comment subdoc using the id method on Mongoose arrays
   const comment = post.comments.id(req.params.commentId);
-  // Ensure that the comment was created by the logged in user
   if (!comment.user.equals(req.user._id)) return res.redirect(`/posts/${post._id}`);
   comment.content = req.body.content;
   try {
