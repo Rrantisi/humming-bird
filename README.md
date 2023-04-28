@@ -19,7 +19,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#about-the-project">About The Project</a>
-    <li><a href="#experiencing">Experiencing HummingBird</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#icebox">Ice Box</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -44,9 +44,11 @@ Our platform is designed to be a one-stop-shop for all your community needs. Wh
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Experiencing HummingBird
+## Getting Started
 
-https://hummingbird.herokuapp.com/
+[HummingBird App](https://hummingbird.herokuapp.com/)
+
+[Trello Board](https://trello.com/b/BzHNKAK2/sei-project-2-hummingbird)
 
 Getting started with HummingBird it's very simple:
 
