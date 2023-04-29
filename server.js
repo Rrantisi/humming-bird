@@ -7,6 +7,7 @@ const methodOverride = require('method-override');
 const indexRoutes = require('./routes/index');
 const postRoutes = require('./routes/posts');
 const commentsRoutes = require('./routes/comments');
+const userRoutes = require('./routes/users');
 
 // initialize express application
 const app = express();
@@ -45,6 +46,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/', indexRoutes);
 app.use('/', commentsRoutes);
 app.use('/posts', postRoutes);
+app.use('/users', userRoutes )
 
 // "fallback" or "catch all" route for serving 404 page
 app.use('*', (req, res) => {

@@ -425,6 +425,32 @@ footer {
     color: black;
 }
 
+.show-user > div{
+    background-color: white;
+    padding: 3vmin;
+    line-height: 8vmin;
+    border: 4px solid #f0f0f0;
+    border-radius: 1vmin;
+}
+
+.show-user img {
+    padding: 2vmin;
+    border-radius: 50%;
+    height: 25vmin;
+    border: 4px solid #f0f0f0;
+}
+
+.profile-info {
+    color: #00796d;
+    padding: 3vmin;
+    border-radius: 1vmin;
+    margin-top: -2vmin;
+}
+
+.profile-info > h2 {
+    font-size: 4vmin;
+}
+
 @media only screen and (max-width: 1200px) {
     section {
         width: 80vmin;
