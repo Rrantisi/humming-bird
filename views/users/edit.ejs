@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %>
+    <section>
+        <form id="update-profile" action="/users/<%= user._id %>?_method=PUT" method="POST">
+            <label> Location:
+                <input class="input" type="text" name="location" value="<%= user.location %>">
+            </label>
+            <label>Bio:
+                <input class="input" type="text" name="bio" value="<%= user.bio %>">
+            </label>
+            <label>Social Media Links:
+                <input class="input" type="text" name="socialLinks" value="<%= user.socialLinks %>">
+            </label>
+            <input class="submit" type="submit" value="submit">
+        </form>
+    </section>
+    <%- include('../partials/footer') %>
+</body>
+</html>
