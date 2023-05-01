@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <!-- <img src="css/imgs/logo.png" alt="hummingbird" width="80" height="80"> -->
+    <img src="/public/imgs/logo.png" alt="hummingbird" width="80" height="80">
   </a>
 
   <h1 align="center">HummingBird</h1>
@@ -57,6 +57,9 @@ Getting started with HummingBird it's very simple:
 - Read recent posts of your commuinty
 - Update existing comments
 - Delete existing comments
+- See your profile details by clicking your avatar image
+- Add more info about you by clicking add more info button
+- See all your comments, and update or delete them.
 
 ![humming-bird1](/public/imgs/hb1.jpeg)
 
@@ -87,12 +90,11 @@ Getting started with HummingBird it's very simple:
 
 ## Icebox Items
 
-1. Add profile button and display profile infos
+1. Search for posts/people on hummingBird
 2. Like/Save post
-4. Search for posts/people on hummingBird
-5. Edit/Delete a post
-6. Notifications feature
-7. Share post
+3. Edit/Delete a post
+4. Share post
+5. Notifications feature
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -106,8 +108,8 @@ Getting started with HummingBird it's very simple:
 
 ## Acknowledgments
 
-- Daniel Scott - SEI Lead Instructor
-- Troy Swayzee - SEI Lead Instructor
+- Daniel Scott - SEI Senior Instructor Lead
+- Troy Swayzee - SEI Instructor Lead
 - Iris Toland - SEI Instructional Assistant
 - Megan Barber - SEI Instructional Assistant
 <p align="right">(<a href="#top">back to top</a>)</p>
