@@ -34,7 +34,7 @@ async function edit(req, res) {
     res.render('users/edit', { title: 'Add More Info', user: foundUser});
   }
   
-  async function update(req, res) {
+async function update(req, res) {
     const user = await User.findOne({'_id': req.params.userId});
     if (!user.equals(req.user._id)) return res.redirect(`/posts`);
     user.location = req.body.location;
