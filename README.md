@@ -1,20 +1,13 @@
-<!-- <div id="top"></div> -->
-
 <!-- PROJECT LOGO -->
+
 <br />
 <div align="center">
     <img src="/public/imgs/logo.png" alt="hummingbird" width="80" height="80">
-  </a>
-
   <h1 align="center">HummingBird</h1>
-
-  <p align="center">
-    A vibrant online community platform where you can connect with people from your community and build strong relationships.
-    <br>
-  </p>
 </div>
 
 <!-- TABLE OF CONTENTS -->
+
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -31,16 +24,16 @@
 
 ## About the Project
 
-HummingBird vibrant online community platform where you can connect with people from your community and build strong relationships.
+HummingBird is a vibrant online community platform where you can connect with people from your community and build strong relationships.
 
 Here's why:
 
-- Engage with your local community by creating posts and sharing your knowledge by commenting on someone's else post
+- Engage with your local community by creating posts and sharing your knowledge by commenting on someone else's post
 - Ask for recommendations, advice, or any type of help
-- Get to know who your neighbors are and share common interests and passions
+- Get to know your neighbors and share common interests and hobbies
 - Make new friends! We really encourage strong community relationships at HummingBird.
 
-Our platform is designed to be a one-stop shop for all your community needs. Whether you are looking for advice, recommendations. You can ask for help and/or donate time by supporting your local community.
+Our platform is designed to be a one-stop shop for all your community needs. Whether you are looking for advice or recommendations - you can ask for help and/or donate time by supporting your local community.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -54,9 +47,9 @@ Getting started with HummingBird is very simple:
 
 - Login using your Google Account by clicking login button
 - Create a new post by clicking the "+" button
-- Read recent posts of your commuinty
-- Update existing comments
-- Delete existing comments
+- Check recent posts by your community
+- Offer help by adding comments
+- Update/Delete your comments
 - See your profile details by clicking your avatar image
 - Add more info about you by clicking add more info button
 - See all your comments, and update or delete them.
