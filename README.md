@@ -35,12 +35,12 @@ HummingBird vibrant online community platform where you can connect with people 
 
 Here's why:
 
-- Engage with you local commuity by creating messages posts and sharing your knowledgement by commenting in someone's else post
-- Ask for recommendations, advice, any type of help
-- Get to know who your neighbours are and share common interests and passions
-- Make new friends! We really encourage strong commuinty relationships at HummingBird.
+- Engage with your local community by creating posts and sharing your knowledge by commenting on someone's else post
+- Ask for recommendations, advice, or any type of help
+- Get to know who your neighbors are and share common interests and passions
+- Make new friends! We really encourage strong community relationships at HummingBird.
 
-Our platform is designed to be a one-stop-shop for all your community needs. Whether you are looking for advice, recommendations. You can ask for help and/or donate your time by supporting your local community.
+Our platform is designed to be a one-stop shop for all your community needs. Whether you are looking for advice, recommendations. You can ask for help and/or donate time by supporting your local community.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -50,7 +50,7 @@ Our platform is designed to be a one-stop-shop for all your community needs. Wh
 
 [Trello Board](https://trello.com/b/BzHNKAK2/sei-project-2-hummingbird)
 
-Getting started with HummingBird it's very simple:
+Getting started with HummingBird is very simple:
 
 - Login using your Google Account by clicking login button
 - Create a new post by clicking the "+" button
@@ -71,15 +71,19 @@ Getting started with HummingBird it's very simple:
 
 ![humming-bird1](/public/imgs/hb5.jpeg)
 
+![humming-bird1](/public/imgs/hb6.jpeg)
+
+![humming-bird1](/public/imgs/hb7.jpeg)
+
 ![humming-bird1](/public/imgs/erd.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Built With
 
-- [HTML]
-- [CSS]
-- [Javascript]
+- HTML
+- CSS
+- Javascript
 - [Node.js](https://nodejs.org/)
 - [Express.js](https://expressjs.com/)
 - [MongoDB](https://mongodb.com/)
