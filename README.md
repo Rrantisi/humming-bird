@@ -71,9 +71,9 @@ Getting started with HummingBird is very simple:
 
 ![humming-bird1](/public/imgs/hb5.jpeg)
 
-![humming-bird1](/public/imgs/hb6.jpeg)
+![humming-bird1](/public/imgs/hb6.png)
 
-![humming-bird1](/public/imgs/hb7.jpeg)
+![humming-bird1](/public/imgs/hb7.png)
 
 ![humming-bird1](/public/imgs/erd.png)
 
