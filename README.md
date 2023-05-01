@@ -81,7 +81,7 @@ Getting started with HummingBird is very simple:
 
 ## Built With
 
-- HTML
+- EJS
 - CSS
 - Javascript
 - [Node.js](https://nodejs.org/)
