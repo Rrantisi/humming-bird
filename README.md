@@ -70,6 +70,8 @@ Getting started with HummingBird is very simple:
 
 ![humming-bird1](/public/imgs/erd.png)
 
+<a href="https://www.flaticon.com/free-icons/bird" title="bird icons">Bird icons created by vectorsmarket15 - Flaticon</a>
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Built With
